@@ -26,5 +26,12 @@ select count(distinct productID)[Distinct Product] from dbo.sales
 select Paymentmethod,count(distinct paymentmethod)[Distinct Payment] from dbo.sales
 group by PaymentMethod
 
+select paymentmethod, sum(TotalAmount)[Total Amount for each product] from dbo.sales
+group by PaymentMethod
+
+select ProductID,PaymentMethod,sum(TotalAmount) as [Sum of sales] from dbo.Sales
+group by ProductID,PaymentMethod
+order by ProductID
+
 select Paymentmethod,count(*)[Payment] from dbo.sales
 group by PaymentMethod 
