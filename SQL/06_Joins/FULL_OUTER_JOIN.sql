@@ -21,3 +21,6 @@ ON e.Department_ID = d.Department_ID;
 
 -- Remember:
 -- FULL OUTER JOIN = Everything from both tables
+--Fully Outer Join 
+select * from table1 full outer join table2
+on table1.C1 = table2.C1
