@@ -26,3 +26,10 @@ WHERE d.Department_ID IS NULL;
 
 -- Remember:
 -- LEFT ANTI = LEFT table without matches
+select * from table1
+select * from table2
+
+select * from table1 left join table2
+on table1.C1 = table2.C1
+where table2.C3 is null
+
